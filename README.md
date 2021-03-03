@@ -46,3 +46,6 @@ Lanzamos el contenedor local:
 > docker run --rm -it -p 8000:8000 -v "$PWD":/docs squidfunk/mkdocs-material
 
 Si ingresamos a localhost:8000 podremos ver nuestro sitio y empezar a añadirle contenido.
+
+# MI BLOG MKDOCS
+[joseean29.github.io/iaw-mkdocs]**https://joseean29.github.io/iaw-mkdocs**
