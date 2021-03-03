@@ -21,14 +21,24 @@ En github, tenemos que crearnos un repositorio con el nombre que queramos. En nu
 El archivo mkdocs.yml deberá tener de base el siguiente contenido:
 
 ```
-site_name: A PLACE FOR PACR
+site_name: Blog de Jose Antonio
+site_description: 'Sitio Mkdocs de Jose Antonio Abad Jurado en el que están sus prácticas de IAW'
+site_author: Jose Antonio
 
 nav:
     - Principal: index.md
-    - Acerca de: about.md
-    - Pagina-prueba: prueba.md
+    - Práctica 1: about.md
+    - Práctica 2: practica2.md
 
-theme: material
+theme:
+  name: 'material'
+  lenguage: 'es'
+  palette:
+    primary: 'blue grey'
+    accent: 'black'
+  front:
+    text: 'Robot'
+    code: 'Roboto Mono'
 ```
 
 - **site name.** Especifica el nombre que tendrá nuestro sitio web.
