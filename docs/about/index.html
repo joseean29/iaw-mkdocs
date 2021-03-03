@@ -264,13 +264,21 @@
 <p>Configuramos las primeras cosas que van saliendo, idioma, zona horaria, etc... Y una vez instalado el SO al completo lo que hacemos es reiniciar y quitar el disco. Después de esto iniciamos sesión y establecemos una dirección IP estática.</p>
 <p>Instalé SSH para poder conectarme desde mi portátil y tener más facilidad a la hora de copiar y pegar comandos.</p>
 <h2 id="instalacion-apache-http-server">Instalación Apache HTTP Server</h2>
-<p>Comprobamos que tenemos la lista de repositorios y paquetes actualizado mediante el comando: "sudo apt update"</p>
-<p>En caso de que hubiera nuevos paquetes para instalar, usamos el siguiente comando: "sudo apt upgrade"</p>
-<p>Una vez hayamos actualizado los paquetes instalamos el servidor Apache: "sudo apt install apache2 -y"</p>
+<p>Comprobamos que tenemos la lista de repositorios y paquetes actualizado mediante el comando: </p>
+<pre><code>sudo apt update
+</code></pre>
+<p>En caso de que hubiera nuevos paquetes para instalar, usamos el siguiente comando: </p>
+<pre><code>sudo apt upgrade
+</code></pre>
+<p>Una vez hayamos actualizado los paquetes instalamos el servidor Apache: </p>
+<pre><code>sudo apt install apache2 -y
+</code></pre>
 <p>Añadimos "-y" a final de los comandos con el fin de que se omita cualquier interacción con el ususario y la instalación sea directa.</p>
 <p>Para comprobar que se ha instalado correctamente lo que hacemos es poner en el navegador nuestra dirección IP de la máquina servidor y vemos que se nos muestra la página principal de Apache.</p>
 <h2 id="instalacion-php">Instalación PHP</h2>
-<p>Para instalar PHP y sus herramientas usaremos: "sudo apt install php libapache2-mod-php php-mysql"</p>
+<p>Para instalar PHP y sus herramientas usaremos: </p>
+<pre><code>sudo apt install php libapache2-mod-php php-mysql
+</code></pre>
 <p>Para comprobar que se ha instalado vamos al entramos al archivo /var/www/html/info.php y con algún editor de texto añadimos las siguientes líneas:</p>
 <pre><code class="language-php">&lt;?php
 phpinfo();
@@ -278,45 +286,60 @@ phpinfo();
 </code></pre>
 <p>Ahora abrimos el navegador y ponemos nuestra dirección IP/info.php, si todo ha salido bien veremos un documento en el que se nos enseñará toda la información php del servidor.</p>
 <h2 id="instalacion-mysql-server">Instalación MySQL Server</h2>
-<p>Introducimos el comando: "sudo apt install mysql-server -y"</p>
-<p>Para comprobar que se ha instalado correctamente podemos acceder al servidor MySQL a través del comando: "sudo mysql -u root"</p>
+<p>Introducimos el comando: <code>sudo apt install mysql-server -y</code></p>
+<p>Para comprobar que se ha instalado correctamente podemos acceder al servidor MySQL a través del comando: <code>sudo mysql -u root</code></p>
 <p>Si todo está bien accederemos sin ningún problema.</p>
 <h2 id="instalacion-de-la-aplicacion-web-propuesta">Instalación de la aplicación web propuesta</h2>
-<p>Lo primero que tenemos que hacer es ir a la carpeta en la que vamos a instalar la aplicación con el comando: "cd /var/www/html"</p>
-<p>Para futuras reinstalaciones y demás, nos aseguraremos de que el directorio de la aplicación no existe eliminándola en caso de que esté creado con el comando: "sudo rm -rf iaw-practica-lamp"</p>
+<p>Lo primero que tenemos que hacer es ir a la carpeta en la que vamos a instalar la aplicación con el comando: <code>cd /var/www/html</code></p>
+<p>Para futuras reinstalaciones y demás, nos aseguraremos de que el directorio de la aplicación no existe eliminándola en caso de que esté creado con el comando: <code>sudo rm -rf iaw-practica-lamp</code></p>
 <p>Ahora descargamos el repositorio de Github: "git clone https://github.com/josejuansanchez/iaw-practica-lamp.git"</p>
-<p>Posteriormente movemos el contenido del repositorio a la carpeta de nuestro apache: "mv /var/www/html/iaw-practica-lamp/src/* /var/www/html/"</p>
-<p>Después eliminamos el archivo index.html de apache para que al entrar al servidor se nos muestre la aplicación web: "rm -rf /var/www/html/index.html"</p>
+<p>Posteriormente movemos el contenido del repositorio a la carpeta de nuestro apache: <code>mv /var/www/html/iaw-practica-lamp/src/* /var/www/html/</code></p>
+<p>Después eliminamos el archivo index.html de apache para que al entrar al servidor se nos muestre la aplicación web: <code>rm -rf /var/www/html/index.html</code></p>
 <p>Por último en este apartado crearemos el script para la base de datos de la aplicación, y eliminaremos el directorio iaw-practica-lamp ya que ya no lo necesitaremos:</p>
-<p>"mysql -u root -p$DB_ROOT_PASSWD &lt; /var/www/html/iaw-practica-lamp/db/database.sql"
-"rm -rf /var/www/html/iaw-practica-lamp/"</p>
+<pre><code>mysql -u root -p$DB_ROOT_PASSWD &lt; /var/www/html/iaw-practica-lamp/db/database.sql
+
+rm -rf /var/www/html/iaw-practica-lamp/
+</code></pre>
 <h2 id="instalacion-adminer">Instalación Adminer</h2>
-<p>Lo primero que debemos hacer es crear el directorio de instalación: "mkdir /var/www/html/adminer"</p>
-<p>Nos movemos al directorio y una vez allí descargamos su repositorio de Github con el siguiente comando
-"wget https://github.com/vrana/adminer/releases/download/v4.7.7/adminer-4.7.7-mysql.php"</p>
-<p>Movemos los ficheros php al directorio de apache: "mv adminer-4.7.7-mysql.php index.php"</p>
-<p>Lo último que haremos en esta instalación será cambiarle los permisos al directorio ade apache: "chown www-data:www-data * -R"</p>
+<p>Lo primero que debemos hacer es crear el directorio de instalación: <code>mkdir /var/www/html/adminer</code></p>
+<p>Nos movemos al directorio y una vez allí descargamos su repositorio de Github con el siguiente comando</p>
+<pre><code>wget https://github.com/vrana/adminer/releases/download/v4.7.7/adminer-4.7.7-mysql.php
+</code></pre>
+<p>Movemos los ficheros php al directorio de apache: <code>mv adminer-4.7.7-mysql.php index.php</code></p>
+<p>Lo último que haremos en esta instalación será cambiarle los permisos al directorio ade apache: <code>chown www-data:www-data * -R</code></p>
 <h2 id="instalacion-goaccess">Instalación GoAccess</h2>
-<p>Para esto tenemos que abrir el archivo de repositorios de ubuntu y agregarlo al siguiente repositorio: "deb http://deb.goaccess.io/"</p>
-<p>Tenemos que conseguir la clave de la aplicación, que se hace así: "wget -O - https://deb.goaccess.io/gnugpg.key | sudo apt-key add -"</p>
-<p>Por último actualizamos nuestra lista de paquetes e instalamos GoAccess: "apt update -y"
-                                                                         "apt install goaccess -y"</p>
+<p>Para esto tenemos que abrir el archivo de repositorios de ubuntu y agregarlo al siguiente repositorio: <code>deb http://deb.goaccess.io/</code></p>
+<p>Tenemos que conseguir la clave de la aplicación, que se hace así: <code>wget -O - https://deb.goaccess.io/gnugpg.key | sudo apt-key add -</code></p>
+<p>Por último actualizamos nuestra lista de paquetes e instalamos GoAccess: </p>
+<pre><code>apt update -y
+
+apt install goaccess -y
+</code></pre>
 <h2 id="configuracion-del-control-de-acceso">Configuración del control de acceso</h2>
-<p>Creamos un directorio para instalar en él el stats de apache: "mkdir /var/www/html/stats"</p>
-<p>Dejamos que GoAcces se ejecute en segundo plano: "nohup goaccess /var/log/apache2/access.log -o /var/www/html/stats/index.html --log-format=COMBINED --real-time-html &amp;"</p>
-<p>Creamos un archivo en el que estarán las contraseñas del usuario: "htpasswd -b -c $HTTPASSWD_DIR/.htpasswd $HTTPASSWD_USER $HTTPASSWD_PASSWD"</p>
-<p>Sustituimos las cadenas correspondientes de PATH así: "sed -i 's#REPLACE_THIS_PATH#$HTTPASSWD_DIR#g' $HTTPASSWD_DIR/000-default.conf"</p>
-<p>Copiamos el archivo de configuración: "cp $HTTPASSWD_DIR/000-default.conf /etc/apache2/sites-available/"</p>
-<p>Y para terminar reiniciamosapache: "systemctl restart apache2"</p>
+<p>Creamos un directorio para instalar en él el stats de apache: <code>mkdir /var/www/html/stats</code></p>
+<p>Dejamos que GoAcces se ejecute en segundo plano: <code>nohup goaccess /var/log/apache2/access.log -o /var/www/html/stats/index.html --log-format=COMBINED --real-time-html &amp;</code></p>
+<p>Creamos un archivo en el que estarán las contraseñas del usuario: <code>htpasswd -b -c $HTTPASSWD_DIR/.htpasswd $HTTPASSWD_USER $HTTPASSWD_PASSWD</code></p>
+<p>Sustituimos las cadenas correspondientes de PATH así: <code>sed -i 's#REPLACE_THIS_PATH#$HTTPASSWD_DIR#g' $HTTPASSWD_DIR/000-default.conf</code></p>
+<p>Copiamos el archivo de configuración: <code>cp $HTTPASSWD_DIR/000-default.conf /etc/apache2/sites-available/</code></p>
+<p>Y para terminar reiniciamosapache: <code>systemctl restart apache2</code></p>
 <h2 id="instalacion-awstats">Instalación  AWStats</h2>
 <p>Ejecutamos el siguiente comando: "apt install awstats -y"</p>
-<p>Cambiamos los valores LogFormat y SiteDomain del archivo de configuración: "sed -i 's/LogFormat=4/LogFormat=1/g' /etc/awstats/awstats.conf"
-                                                                           "sed -i 's/SiteDomain=""/SiteDomain="practicaiaw.com"/g' /etc/awstats/awstats.conf"</p>
-<p>Copiamos el archivo editado al directorio: "/etc/apache2/conf-available/: cp $HTTPASSWD_DIR/awstats.conf /etc/apache2/conf-available/"</p>
-<p>Activamos el servicio AWStats con los siguientes comandos: "a2enconf awstats serve-cgi-bin"
-                                                           "a2enmod cgi"</p>
-<p>Reiniciamos apache, modificamos los permisos y actualizamos los logs: "systemctl restart apache2"
-                                                                    "sed -i -e "s/www-data/root/g" /etc/cron.d/awstats /usr/share/awstats/tools/update.sh"</p>
+<p>Cambiamos los valores LogFormat y SiteDomain del archivo de configuración: </p>
+<pre><code>sed -i 's/LogFormat=4/LogFormat=1/g' /etc/awstats/awstats.conf
+
+sed -i 's/SiteDomain=&quot;&quot;/SiteDomain=&quot;practicaiaw.com&quot;/g' /etc/awstats/awstats.conf
+</code></pre>
+<p>Copiamos el archivo editado al directorio: <code>/etc/apache2/conf-available/: cp $HTTPASSWD_DIR/awstats.conf /etc/apache2/conf-available/</code></p>
+<p>Activamos el servicio AWStats con los siguientes comandos: </p>
+<pre><code>a2enconf awstats serve-cgi-bin
+
+a2enmod cgi
+</code></pre>
+<p>Reiniciamos apache, modificamos los permisos y actualizamos los logs: </p>
+<pre><code>systemctl restart apache2
+
+sed -i -e &quot;s/www-data/root/g&quot; /etc/cron.d/awstats /usr/share/awstats/tools/update.sh
+</code></pre>
                 
               
               
