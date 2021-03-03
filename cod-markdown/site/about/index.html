@@ -1,0 +1,416 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Sitio Mkdocs de Jose Antonio Abad Jurado en el que están sus prácticas de IAW">
+      
+      
+      
+        <meta name="author" content="Jose Antonio">
+      
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.0.3">
+    
+    
+      
+        <title>Práctica 1 - Blog de Jose Antonio</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.1655a90d.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.7fa14f5b.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#546d78">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="blue-grey" data-md-color-accent="black">
+      
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#practica-1-iaw" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Blog de Jose Antonio" class="md-header__button md-logo" aria-label="Blog de Jose Antonio">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Blog de Jose Antonio
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Práctica 1
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="md-header__options">
+      
+    </div>
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Blog de Jose Antonio" class="md-nav__button md-logo" aria-label="Blog de Jose Antonio">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Blog de Jose Antonio
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Principal
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Práctica 1
+      </a>
+      
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../practica2/" class="md-nav__link">
+        Práctica 2
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="practica-1-iaw">PRÁCTICA 1 IAW</h1>
+<h1 id="instalacion-de-la-pila-lamp-en-una-maquina-ubuntu-server">Instalación de la pila LAMP en una máquina Ubuntu Server</h1>
+<p><img alt="" src="https://raw.githubusercontent.com/joseean29/joseean29.github.io/master/images/lamp.png" /></p>
+<h2 id="configuracion-previa">Configuración previa</h2>
+<p>Lo primero que debemos hacer es crear una máquina virtual Ubuntu 20.04 en VirtualBox, en mi caso dejé el tamaño de disco duro y de memoria RAM de forma predeterminada, la red en modo adaptador puente y cargamos la iso.</p>
+<p>Configuramos las primeras cosas que van saliendo, idioma, zona horaria, etc... Y una vez instalado el SO al completo lo que hacemos es reiniciar y quitar el disco. Después de esto iniciamos sesión y establecemos una dirección IP estática.</p>
+<p>Instalé SSH para poder conectarme desde mi portátil y tener más facilidad a la hora de copiar y pegar comandos.</p>
+<h2 id="instalacion-apache-http-server">Instalación Apache HTTP Server</h2>
+<p>Comprobamos que tenemos la lista de repositorios y paquetes actualizado mediante el comando: </p>
+<pre><code>sudo apt update
+</code></pre>
+<p>En caso de que hubiera nuevos paquetes para instalar, usamos el siguiente comando: </p>
+<pre><code>sudo apt upgrade
+</code></pre>
+<p>Una vez hayamos actualizado los paquetes instalamos el servidor Apache: </p>
+<pre><code>sudo apt install apache2 -y
+</code></pre>
+<p>Añadimos "-y" a final de los comandos con el fin de que se omita cualquier interacción con el ususario y la instalación sea directa.</p>
+<p>Para comprobar que se ha instalado correctamente lo que hacemos es poner en el navegador nuestra dirección IP de la máquina servidor y vemos que se nos muestra la página principal de Apache.</p>
+<h2 id="instalacion-php">Instalación PHP</h2>
+<p>Para instalar PHP y sus herramientas usaremos: </p>
+<pre><code>sudo apt install php libapache2-mod-php php-mysql
+</code></pre>
+<p>Para comprobar que se ha instalado vamos al entramos al archivo /var/www/html/info.php y con algún editor de texto añadimos las siguientes líneas:</p>
+<pre><code class="language-php">&lt;?php
+phpinfo();
+?&gt;
+</code></pre>
+<p>Ahora abrimos el navegador y ponemos nuestra dirección IP/info.php, si todo ha salido bien veremos un documento en el que se nos enseñará toda la información php del servidor.</p>
+<h2 id="instalacion-mysql-server">Instalación MySQL Server</h2>
+<p>Introducimos el comando: <code>sudo apt install mysql-server -y</code></p>
+<p>Para comprobar que se ha instalado correctamente podemos acceder al servidor MySQL a través del comando: <code>sudo mysql -u root</code></p>
+<p>Si todo está bien accederemos sin ningún problema.</p>
+<h2 id="instalacion-de-la-aplicacion-web-propuesta">Instalación de la aplicación web propuesta</h2>
+<p>Lo primero que tenemos que hacer es ir a la carpeta en la que vamos a instalar la aplicación con el comando: <code>cd /var/www/html</code></p>
+<p>Para futuras reinstalaciones y demás, nos aseguraremos de que el directorio de la aplicación no existe eliminándola en caso de que esté creado con el comando: <code>sudo rm -rf iaw-practica-lamp</code></p>
+<p>Ahora descargamos el repositorio de Github: "git clone https://github.com/josejuansanchez/iaw-practica-lamp.git"</p>
+<p>Posteriormente movemos el contenido del repositorio a la carpeta de nuestro apache: <code>mv /var/www/html/iaw-practica-lamp/src/* /var/www/html/</code></p>
+<p>Después eliminamos el archivo index.html de apache para que al entrar al servidor se nos muestre la aplicación web: <code>rm -rf /var/www/html/index.html</code></p>
+<p>Por último en este apartado crearemos el script para la base de datos de la aplicación, y eliminaremos el directorio iaw-practica-lamp ya que ya no lo necesitaremos:</p>
+<pre><code>mysql -u root -p$DB_ROOT_PASSWD &lt; /var/www/html/iaw-practica-lamp/db/database.sql
+
+rm -rf /var/www/html/iaw-practica-lamp/
+</code></pre>
+<h2 id="instalacion-adminer">Instalación Adminer</h2>
+<p>Lo primero que debemos hacer es crear el directorio de instalación: <code>mkdir /var/www/html/adminer</code></p>
+<p>Nos movemos al directorio y una vez allí descargamos su repositorio de Github con el siguiente comando</p>
+<pre><code>wget https://github.com/vrana/adminer/releases/download/v4.7.7/adminer-4.7.7-mysql.php
+</code></pre>
+<p>Movemos los ficheros php al directorio de apache: <code>mv adminer-4.7.7-mysql.php index.php</code></p>
+<p>Lo último que haremos en esta instalación será cambiarle los permisos al directorio ade apache: <code>chown www-data:www-data * -R</code></p>
+<h2 id="instalacion-goaccess">Instalación GoAccess</h2>
+<p>Para esto tenemos que abrir el archivo de repositorios de ubuntu y agregarlo al siguiente repositorio: <code>deb http://deb.goaccess.io/</code></p>
+<p>Tenemos que conseguir la clave de la aplicación, que se hace así: <code>wget -O - https://deb.goaccess.io/gnugpg.key | sudo apt-key add -</code></p>
+<p>Por último actualizamos nuestra lista de paquetes e instalamos GoAccess: </p>
+<pre><code>apt update -y
+
+apt install goaccess -y
+</code></pre>
+<h2 id="configuracion-del-control-de-acceso">Configuración del control de acceso</h2>
+<p>Creamos un directorio para instalar en él el stats de apache: <code>mkdir /var/www/html/stats</code></p>
+<p>Dejamos que GoAcces se ejecute en segundo plano: <code>nohup goaccess /var/log/apache2/access.log -o /var/www/html/stats/index.html --log-format=COMBINED --real-time-html &amp;</code></p>
+<p>Creamos un archivo en el que estarán las contraseñas del usuario: <code>htpasswd -b -c $HTTPASSWD_DIR/.htpasswd $HTTPASSWD_USER $HTTPASSWD_PASSWD</code></p>
+<p>Sustituimos las cadenas correspondientes de PATH así: <code>sed -i 's#REPLACE_THIS_PATH#$HTTPASSWD_DIR#g' $HTTPASSWD_DIR/000-default.conf</code></p>
+<p>Copiamos el archivo de configuración: <code>cp $HTTPASSWD_DIR/000-default.conf /etc/apache2/sites-available/</code></p>
+<p>Y para terminar reiniciamosapache: <code>systemctl restart apache2</code></p>
+<h2 id="instalacion-awstats">Instalación  AWStats</h2>
+<p>Ejecutamos el siguiente comando: "apt install awstats -y"</p>
+<p>Cambiamos los valores LogFormat y SiteDomain del archivo de configuración: </p>
+<pre><code>sed -i 's/LogFormat=4/LogFormat=1/g' /etc/awstats/awstats.conf
+
+sed -i 's/SiteDomain=&quot;&quot;/SiteDomain=&quot;practicaiaw.com&quot;/g' /etc/awstats/awstats.conf
+</code></pre>
+<p>Copiamos el archivo editado al directorio: <code>/etc/apache2/conf-available/: cp $HTTPASSWD_DIR/awstats.conf /etc/apache2/conf-available/</code></p>
+<p>Activamos el servicio AWStats con los siguientes comandos: </p>
+<pre><code>a2enconf awstats serve-cgi-bin
+
+a2enmod cgi
+</code></pre>
+<p>Reiniciamos apache, modificamos los permisos y actualizamos los logs: </p>
+<pre><code>systemctl restart apache2
+
+sed -i -e &quot;s/www-data/root/g&quot; /etc/cron.d/awstats /usr/share/awstats/tools/update.sh
+</code></pre>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        <a href=".." class="md-footer__link md-footer__link--prev" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Principal
+            </div>
+          </div>
+        </a>
+      
+      
+        <a href="../practica2/" class="md-footer__link md-footer__link--next" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Práctica 2
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../assets/javascripts/workers/search.fb4a9340.min.js", "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.ca5457b8.min.js"></script>
+      
+    
+  </body>
+</html>
