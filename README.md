@@ -41,11 +41,11 @@ theme:
     code: 'Roboto Mono'
 ```
 
-- **site name.** Especifica el nombre que tendrá nuestro sitio web.
+- site name. Indica el nombre de nuestro sitio web.
 
-- **nav:** Este apartado es importante, creará un pequeño menú en el que irán nuestras páginas, como se ve, a excepción de las dos primeras páginas (esas tienen que estar por defecto) primero ponemos un - seguido de el nombre que se mostrará para la página, a continuación se le pone : y se escribe el nombre que tiene el archivo Markdown que representa a la página, este archivo debe estar en la carpeta docs.
+- **nav:** Esta sección crea el menú en el que se visualizarán nuestros posts, este archivo debe estar en la carpeta docs.
 
-- **theme.** Es el tema que vamos a utilizar para nuestra página, podemos desarrollarlo con más opciones que podemos encontrar en la [documentación](https://www.mkdocs.org/#mkdocs) oficial.
+- **theme.** Es el tema que vamos a utilizar para nuestra página, podemos desarrollarlo con más opciones que podemos encontrar en la [documentación](https://www.mkdocs.org/#mkdocs) oficial. Arriba se puede ver como lo tengo confeccionado yo.
 
 ## Probando nuestro sitio de forma local
 
@@ -56,6 +56,20 @@ Lanzamos el contenedor local:
 > docker run --rm -it -p 8000:8000 -v "$PWD":/docs squidfunk/mkdocs-material
 
 Si ingresamos a localhost:8000 podremos ver nuestro sitio y empezar a añadirle contenido.
+
+## Generar la documentación
+También es posible generar directamente el sitio web sin tener que iniciar un servidor local de desarrollo. Para generar el sitio web automáticamente podemos ejecutar el siguiente comando:
+```
+docker run --rm -it -v "$PWD":/docs squidfunk/mkdocs-material build
+```
+El comando anterior creará un directorio llamado `site` donde guarda el sitio web que se ha generado. Luego habrá que renombrar este directorio a docs para que el blog se pueda visualizar directamente en html.
+
+## Publicar la documentación en GitHub Pages
+
+Es posible publicar la el sitio web en GitHub Pages con el siguiente comando:
+´´´
+docker run --rm -it -v ~/.ssh:/root/.ssh -v "$PWD":/docs squidfunk/mkdocs-material gh-deploy
+´´´
 
 # MI BLOG MKDOCS
 **[joseean29.github.io/iaw-mkdocs](https://joseean29.github.io/iaw-mkdocs)**
